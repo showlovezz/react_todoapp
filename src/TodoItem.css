@@ -1,0 +1,31 @@
+.todo-item {
+  display: flex;
+  border: 1px dashed #999;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.todo-item.completed {
+  text-decoration: line-through;
+  background: #80eec5;
+}
+
+.todo-text {
+  flex-grow: 1;
+  /* Removes outline when using contentEditable */
+  outline: none;
+  margin-left: 10px;
+  min-height: 20px;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.todo-item.focused {
+  border-color: #2992e9;
+  border-style: solid;
+}
+
+.todo-item.invalid {
+  border-color: #da3b71;
+  border-style: solid;
+}
