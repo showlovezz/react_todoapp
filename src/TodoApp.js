@@ -2,12 +2,14 @@ import React from 'react'
 import { Form, Formik, FieldArray } from 'formik'
 
 import TodoItem from './TodoItem'
+import { validationSchema } from './validationSchema'
 
 const TodoApp = () => (
   <Formik
     initialValues={{ todos: [] }}
     validateOnBlur
     validateOnChange={false}
+    validationSchema={validationSchema}
     validate={val => {
       console.log(val)
     }}
